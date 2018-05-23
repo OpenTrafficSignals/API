@@ -1,0 +1,5 @@
+{
+  "port": 8000,
+  "api_key": "Your Google Directions API key. Get one from here https://developers.google.com/maps/documentation/directions/get-api-key",
+  "interpreter": "https://lz4.overpass-api.de/api/interpreter"
+}

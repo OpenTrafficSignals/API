@@ -1,0 +1,34 @@
+{
+  "name": "api",
+  "version": "1.0.0",
+  "description": "The REST API for the OpenTrafficSignals project",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/OpenTrafficSignals/API.git"
+  },
+  "keywords": [
+    "traffic",
+    "signals",
+    "google maps",
+    "openstreetmaps",
+    "osm",
+    "overpass"
+  ],
+  "author": "Jan-Luca D.",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/OpenTrafficSignals/API/issues"
+  },
+  "homepage": "https://github.com/OpenTrafficSignals/API#readme",
+  "dependencies": {
+    "@google/maps": "^0.4.6",
+    "express": "^4.16.3",
+    "fs": "0.0.1-security",
+    "path": "^0.12.7",
+    "request": "^2.87.0"
+  }
+}
