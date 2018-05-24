@@ -38,7 +38,7 @@ The routing API takes 2 required parameters which are "origin" and "destination"
 A simple request could look like this:  
 <http://localhost:8000/v1/route?origin=New%20York%20City&destination=Jersey%20City>
 
-But this gives only encoded latitudes and longitudes, but maybe we want them decode.  
+But this gives only encoded latitudes and longitudes, but maybe we want them decoded.  
 If this is the case just add a "&decode" to the request:  
 <http://localhost:8000/v1/route?origin=New%20York%20City&destination=Jersey%20City&decode>
 
