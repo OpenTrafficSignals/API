@@ -28,10 +28,10 @@ module.exports = (app, config) => {
 
   app.get('/v1/route', (req, res) => {
     // Check if request is valid
-    if ('origin' in req.query && 'destination' in req.query) {
+    if ('origin' in req.query && req.query.origin !== '' && 'destination' in req.query && req.query.destination !== '') {
       let waypoints = [];
       // Check for waypoints
-      if ('waypoints' in req.query) {
+      if ('waypoints' in req.query && req.query.waypoints !== '') {
         waypoints = req.query.waypoints.split('|');
         for (let i = 0; i < waypoints.length; i++) {
           // Check if waypoint is coordinate
@@ -95,7 +95,7 @@ module.exports = (app, config) => {
 
   app.get('/v1/signals', (req, res) => {
     // Check if request is valid
-    if ('latitudes' in req.query && 'longitudes' in req.query) {
+    if ('latitudes' in req.query && req.query.latitudes !== '' && 'longitudes' in req.query && req.query.latitudes !== '') {
       const latitudes = req.query.latitudes.split('|');
       const longitudes = req.query.longitudes.split('|');
       if (latitudes.length == 2 && longitudes.length == 2) {
