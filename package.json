@@ -26,6 +26,7 @@
   "homepage": "https://github.com/OpenTrafficSignals/API#readme",
   "dependencies": {
     "@google/maps": "^0.4.6",
+    "apicache": "^1.2.1",
     "express": "^4.16.3",
     "fs": "0.0.1-security",
     "path": "^0.12.7",

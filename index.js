@@ -1,11 +1,13 @@
 const fs = require('fs');
 const path = require('path');
 const express = require('express');
+const cache = require('apicache').middleware;
 
 // Load config if it exists
 if (fs.existsSync('config.json')) {
   const config = JSON.parse(fs.readFileSync('config.json', 'utf-8'));
   const app = express();
+  app.use(cache('1 year'));
 
   app.get('/', function(req, res) {
     res.send('<!DOCTYPE html><html><head><title>OpenTrafficSignals API</title></head><body><h1>OpenTrafficSignals API</h1><a href="https://github.com/OpenTrafficSignals/API">Documentation</a></body></html>');
