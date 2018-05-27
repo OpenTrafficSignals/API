@@ -115,7 +115,7 @@ module.exports = (app, config) => {
           longitude0 = longitudes[1];
           longitude1 = longitudes[0];
         }
-        const query = config.interpreter + '?data=[out:json];node[highway=crossing][crossing=traffic_signals](' + latitude0 + ',' + longitude0 + ',' + latitude1 + ',' + longitude1 + ');out;';
+        const query = config.interpreter + '?data=[out:json];node[highway=traffic_signals](' + latitude0 + ',' + longitude0 + ',' + latitude1 + ',' + longitude1 + ');out;';
         request(query, function(error, response, body) {
           try {
             // Check if request succeeded
